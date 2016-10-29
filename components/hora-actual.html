@@ -1,0 +1,32 @@
+
+<dom-module id="hora-actual">
+    <template>
+        <style>
+            :host {
+                display: block;
+                border: 3px solid green;
+            }
+        </style>
+        <span>{{hora}}</span>
+    </template>
+    <script>
+        Polymer({
+            is: 'hora-actual',
+            properties:{
+                hora:String
+            },
+            attached: function(){
+                //this.hora="marcaHora()"
+                this.marcaHora()
+            },
+            marcaHora:function(){
+                this.hora=this.getHora();
+            },
+
+            getHora: function(){
+                var ahora=new Date();
+        return ahora.getHours() + ":" + ahora.getMinutes() + ":" + ahora.getSeconds()
+            }
+        });
+    </script>
+</dom-module>

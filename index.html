@@ -3,15 +3,26 @@
 <head>
 <meta charset="utf-8">
 	<title>Document</title>
+	 <script src="components/webcomponentsjs/webcomponents-lite.js"></script>
+	 <script>
+		 window.Polymer={
+			 dom:'shadow',
+			 lazyRegister:true
+		 };
+	 </script>
 	<link rel="import" href="components/hi-polymer.html">
+	<link rel="import" href="components/nombre-apellidos.html">
 	<link rel="import" href="components/modal-message.html">
 	<link rel="import" href="components/hora-actual.html">
 	<link rel="import" href="components/reloj-actual.html">
+	<link rel="import" href="components/oferta-dia.html">
 </head>
 <body>
 <hi-polymer></hi-polymer>
+<nombre-apellidos nombre="miguel"apellidos="alvarez" is-male></nombre-apellidos>
 <modal-message msg="Hola mensaje"></modal-message>
 <hora-actual></hora-actual>
 <reloj-actual></reloj-actual>
+<oferta-dia></oferta-dia>
 </body>
 </html>

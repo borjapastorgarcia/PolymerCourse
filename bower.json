@@ -13,5 +13,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "iron-icons": "PolymerElements/iron-icons#^1.1.3"
+  }
 }

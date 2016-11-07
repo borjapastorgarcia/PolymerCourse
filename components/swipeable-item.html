@@ -1,0 +1,27 @@
+
+<!--<link rel="import" href="../bower_components/paper-item/paper-icon-item.html">-->
+<link rel="import" href="../bower_components/paper-item/paper-icon-item.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+
+<dom-module id="swipeable-item">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+        <paper-icon-item>
+            <iron-icon icon="[[icon]]" item-icon></iron-icon>
+            [[msg]]
+        </paper-icon-item>
+    </template>
+    <script>
+        Polymer({
+            is: 'swipeable-item',
+            properties:{
+                icon: String,
+                msg:String
+            },
+        });
+    </script>
+</dom-module>

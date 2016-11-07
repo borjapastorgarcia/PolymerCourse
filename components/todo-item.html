@@ -1,0 +1,33 @@
+
+<link rel="import" href="..\bower_components\bower_components\paper-item\paper-item.html">
+<link rel="import" href="..\bower_components\bower_components\paper-checkbox\paper-checkbox.html">
+
+<dom-module id="todo-item">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+        <paper-item>
+            <paper-checkbox on-iron-change="cambioCheck" id="elCheck">{{label}}</paper-checkbox>
+        </paper-item>
+    </template>
+    <script>
+        Polymer({
+            is: 'todo-item',
+            properties:{
+                label:String
+            },
+            cambioCheck: function(){
+                if(this.$.elCheck.checked){
+                    this.fire('tarea-completada', this.label)
+                }
+            },
+            cambia: function(){
+                console.log('voy a...')
+                this.$.elCheck.checked=!this.$.elCheck.checked;
+            }
+        });
+    </script>
+</dom-module>
